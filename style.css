@@ -123,3 +123,41 @@ html,body{
     transform: rotateZ(360deg);
     transition: all 1s ease;
 }
+
+.pg1Capsulein{
+    width: 96%;
+    height: 90%;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
+.pg1Capsulein h1{
+    font-size: 18vmax;
+    letter-spacing: 0.1em;
+    -webkit-text-fill-color: #dadada;
+     mix-blend-mode:difference;
+
+}
+.pg1CapsuleinL{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    background-color: #dadada;
+    border: 2px solid black;
+}
+.pg1CapsuleinR{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    background-color: rgb(2, 2, 2);
+    border: 2px solid black;
+}
