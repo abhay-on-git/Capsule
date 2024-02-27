@@ -11,6 +11,13 @@ html,body{
     height:100%
 }
 
+main{
+background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 ::selection{
     background: transparent;
 }
@@ -128,9 +135,13 @@ html,body{
 .pg1Capsule{
     border: 1px solid black;
 }
+.pg1>h1{
+    font-size: 2vmax;
+    font-family:'Clash Display';
+    margin-bottom: 1vmax; 
+    font-weight: 500;
+}
 .pg1Capsule::before{
-    /* border-right: 12px solid black; */
-    /* box-shadow: 1px 5px 2px black; */
     content: " ";
     position: absolute;
     width: 100%;
@@ -150,15 +161,13 @@ html,body{
     border-radius: 500px;
     display: flex;
     align-items: center;
-    z-index: 99;
-    background-color: #000;
+    /* background-color: #000; */
 }
 .pg1Capsulein h1{
     font-size: 18vmax;
     letter-spacing: 0.1em;
     -webkit-text-fill-color: #dadada;
-     mix-blend-mode:difference;
-
+    mix-blend-mode:difference;
 }
 .pg1CapsuleinL{
     width: 50%;
@@ -168,7 +177,8 @@ html,body{
     justify-content: center;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
-    background-color: #dadada;
+    background-color: aliceblue;
+    box-shadow: inset 1px 1px 5px black;
     /* border: 2px solid black; */
 }
 .pg1CapsuleinR{
@@ -179,6 +189,69 @@ html,body{
     justify-content: center;
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
+    box-shadow: 1px 1px 5px black;
     background-color: rgb(2, 2, 2);
     /* border: 2px solid black; */
 }
+.pg1bottomNav{
+    padding: 0 3vmax;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pg1bottomNav h2{
+    font-size: 3vmax;
+    font-family: Clash Display;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.btn{
+    position: relative;
+    width: 11%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color:transparent;
+    cursor: pointer;
+}
+.btn h3{
+    font-family: Clash Display;
+    font-weight: 500;
+    font-size: 1.3vmax;
+    letter-spacing: 0.1em;
+    -webkit-text-fill-color: #dadada;
+    mix-blend-mode:difference;
+    white-space: nowrap;
+    z-index: 5;
+}
+.btn::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1%;
+    border-radius: 50px;
+    background:black;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.btn:hover::before{
+  height: 100%;
+  transition: all 0.3s ease;
+}
+/* .btn::after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    width: 52%;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background:black;
+} */
