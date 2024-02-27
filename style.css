@@ -1,9 +1,10 @@
 /* font-family: 'Boxing', sans-serif; */
+/* font-family: 'Clash Display', sans-serif; */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Clash Display', sans-serif;
+    font-family: 'Chillax', sans-serif;
 }
 html,body{
     width:100%;
@@ -124,12 +125,32 @@ html,body{
     transition: all 1s ease;
 }
 
+.pg1Capsule{
+    border: 1px solid black;
+}
+.pg1Capsule::before{
+    /* border-right: 12px solid black; */
+    /* box-shadow: 1px 5px 2px black; */
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #0b0b0b;
+    animation: spin 4s linear infinite;
+}
+  @keyframes spin { 
+    100%{
+        transform: rotate(360deg);
+    }
+} 
 .pg1Capsulein{
-    width: 96%;
-    height: 90%;
+    position: relative;
+    width: 98%;
+    height: 95%;
     border-radius: 500px;
     display: flex;
     align-items: center;
+    z-index: 99;
     background-color: #000;
 }
 .pg1Capsulein h1{
@@ -148,7 +169,7 @@ html,body{
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
     background-color: #dadada;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .pg1CapsuleinR{
     width: 50%;
@@ -159,5 +180,5 @@ html,body{
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
     background-color: rgb(2, 2, 2);
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
